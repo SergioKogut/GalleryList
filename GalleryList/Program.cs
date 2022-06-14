@@ -1,4 +1,5 @@
 using GalleryList.DAL;
+using GalleryList.DAL.Seeder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
@@ -46,7 +47,7 @@ app.MapControllerRoute(
 
 app.MapFallbackToFile("index.html"); ;
 
-// отримання данних
-//app.MapGet("/", (ApplicationContext db) => db.Users.ToList());
+
+//SeederDB.SeedDataByAS(app.Services);
 
 app.Run();

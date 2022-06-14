@@ -64,8 +64,7 @@ namespace GalleryList.DAL.Seeder
                 result = userManager.AddToRoleAsync(user, roleName2).Result;
             }
         }
-        public static void SeedDataByAS(IServiceProvider services, IWebHostEnvironment env,
-            IConfiguration config)
+        public static void SeedDataByAS(IServiceProvider services)
         {
             using (var scope = services.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
